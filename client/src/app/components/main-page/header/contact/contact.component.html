@@ -1,0 +1,42 @@
+
+<div class="container contact-form">
+    <div class="contact-image">
+        <!-- <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/> -->
+    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+        <h3>Drop Us a Message</h3>
+        <div class="form-group">
+            <div *ngIf="message" class="alert alert-primary">{{message}}</div>
+        </div>
+        <div class="form-group">
+            <div *ngIf="warningMessage" class="alert alert-danger">{{warningMessage}}</div>
+        </div>
+       <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="txtName" formControlName="name" class="form-control" placeholder="Your Name *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtEmail" formControlName="email" class="form-control" placeholder="Your Email *" value="" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="txtPhone" formControlName="phone" class="form-control" placeholder="Your Phone Number *" value="" />
+                </div>
+                <div class="form-group">
+                    <button [disabled]="message" type="submit" name="btnSubmit" class="btn btnContact">Send Message</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <textarea name="txtMsg" class="form-control" formControlName="content" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="spinner" class="spinner-border form-group" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </form>
+</div>
+
+    
+

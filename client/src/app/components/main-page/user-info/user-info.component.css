@@ -1,0 +1,23 @@
+.card{
+    box-shadow:0 0 4px 2px rgb(53, 108, 121) ;
+}
+
+.btn-guest{
+    width: 90px ;
+    height: 40px;
+    font-size: 12px;
+}
+.contact{
+    width: 278px ;
+}
+
+.card-img-top{
+    height: 30%;
+    width: 80% ;
+    max-width: 100px;
+    border-radius: 50% ;
+}
+
+.new-msg{
+    cursor: pointer;
+}

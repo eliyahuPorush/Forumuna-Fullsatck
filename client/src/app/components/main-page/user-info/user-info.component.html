@@ -1,0 +1,39 @@
+<div *ngIf="!!user">
+    <div class="card bg-light user-details mt-4">
+        <img 
+            class="card-img-top" 
+            src="{{user.profileImagePath}}" 
+        >
+        <div class="ml-2 card-title">
+            <h2>Welcome {{user.name}}</h2>
+            <p>{{user.email}}</p>
+            <p>Posts that you publish: {{user['numberOfPosts']}}</p>
+            <a *ngIf="unreadMessagesNumber" [routerLink]="['private-messages-list']" class="new-msg">{{unreadMessagesNumber}} private messages you didn't read</a> 
+        </div>
+        <div class="card-body">
+            <button class="btn btn-outline-secondary btn-sm mr-1" [routerLink]="['/login']" (click)="userLogout()">Log Out</button>
+            <button class="btn btn-outline-success btn-sm mr-1"  [routerLink]="['add_new_forum']">Add New Post</button>
+            <button class="btn btn-outline-info btn-sm mr-1" [routerLink]="['usersPosts']">My Posts</button>
+            <button class="btn btn-outline-success btn-sm" [routerLink]="['profile']">My Profile</button>
+            <button class="btn btn-outline-success btn-sm" [routerLink]="['private-messages-list']">Private Messages</button>
+
+        </div>
+    </div>
+    <app-spinner *ngIf="spinner"></app-spinner>
+</div>
+
+<!-- if user logout -->
+<div *ngIf="!user">
+    <div class="card bg-light guest">
+        <div class="ml-2 card-title">
+            <h2 class="h2">Hello Guest</h2>
+            <h5 class="h5 text-info">Login to get answers <br> for all your questions</h5>
+        </div>
+        <div class="card-body">
+            <button class="btn-guest btn btn-info mr-1 mb-2" [routerLink]="['login']">Login</button>
+            <button class="btn-guest btn btn-info mr-1 mb-2" [routerLink]="['signUp']">Sign Up</button>
+            <button class="btn-guest btn btn-info mr-1 mb-2" [routerLink]="['about']">About Us</button>
+            <button class="contact btn btn-info" [routerLink]="['contact']">Contact Us</button>
+        </div>
+    </div>
+</div>

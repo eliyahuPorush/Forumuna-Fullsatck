@@ -1,0 +1,17 @@
+
+.container{
+    padding: 2% ;
+    margin-top: 3% ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    width: 40vw;
+    margin-top: 10%;
+    
+}
+
+.welcome{
+    text-align: center;
+    }
+
+    .ng-touched.ng-invalid.form-control{
+        border: 1px solid rgb(236, 157, 157);
+    }

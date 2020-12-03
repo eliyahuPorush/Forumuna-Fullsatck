@@ -1,0 +1,17 @@
+.img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.input-new-message{
+  z-index: 100;
+}
+
+.card{
+  padding: 5px ;
+}
+
+.newMessageArea{
+  width: 400px ;
+}

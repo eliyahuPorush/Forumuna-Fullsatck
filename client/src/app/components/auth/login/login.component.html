@@ -1,0 +1,21 @@
+<div class="container">
+    <app-spinner *ngIf="spinner"></app-spinner>
+    <div class="col">
+        <form class="form-signin" (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+            <h1 class="welcome text-dark">{{brand}}</h1>
+            <hr>
+            <br>
+        <div *ngIf="errorMessage" class="alert alert-danger">{{errorMessage}}</div>
+        <div *ngIf="helloMessage" class="alert alert-success">{{helloMessage}}</div>
+        <input type="email" class="form-control mb-1" placeholder="Email address" formControlName="email">
+        <input type="password" class="form-control" placeholder="Password" formControlName="password">
+        <br>
+        <button class="btn btn-outline-primary btn-block" type="submit"><i class="fas fa-sign-in-alt"></i>Log In</button>
+        <!-- <button (click)="loginWithGoogle()" class="btn btn-outline-danger btn-block" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google</span> </button> -->
+        <br><br>
+        <hr>
+        <p class="welcome"> OR  </p>
+        <button  (click)="onCreateAccount()" class="btn btn-outline-dark btn-block btn-sm" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Create A New Account</button>
+        </form>
+    </div>
+</div>

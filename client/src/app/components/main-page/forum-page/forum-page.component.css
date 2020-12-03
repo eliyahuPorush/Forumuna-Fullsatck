@@ -1,0 +1,34 @@
+img{
+    border-radius: 25%;
+    width:50px ;
+    height: 50px ;
+}
+.forum-self{
+    background-color: rgb(229, 241, 247) ;
+}
+.card-header{
+    padding: 0.1% ;
+}
+.ans-card{
+    background-color: rgb(175, 211, 208);
+}
+/* .card-title{
+    border: 2px solid #3333;
+    width: 50px ;
+    border-radius: 50%;
+} */
+/* .ans-body{
+    margin-top: 2%;
+} */
+
+.user-image{
+    border-radius: 50%;
+}
+.like-icon:hover{
+    /* background-color: rgb(53, 108, 121); */
+ 
+}
+
+.invisibleButton{
+    display: none ;
+}

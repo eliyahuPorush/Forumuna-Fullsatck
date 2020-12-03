@@ -1,0 +1,26 @@
+.header{
+    position: fixed ;
+    top: 0 ;
+    width: 100%;
+    z-index: 2;
+}
+
+.container-fluid{
+    margin-top: 5% ;
+}
+
+/* .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .container-fluid {
+    padding-top: 102px;
+} */
+
+.user-info{
+    position: fixed ;
+    right: 0.5%;
+    top: 10.3% ;
+}

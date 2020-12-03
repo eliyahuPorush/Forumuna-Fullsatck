@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-7">
+            <div *ngFor="let m of messages" class="card bg-light mb-2" (click)="onMsgClicked(m.sender)">
+                <div class="card-image">
+                    <img src="{{domain + m.sender.profileImagePath}}" class="img" alt="">
+                </div>
+                <div class="card-body">
+                    <p>{{m.messageContent}}</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div *ngIf="messageClicked" class="input-new-message form-group col-5 ">
+            <form (ngSubmit)="onSendMessage()" [formGroup]="privateMessageForm">
+                <div class="form-group  position-fixed">
+                    <label for="message"><strong> Message to {{messageTo}}</strong></label>
+                    <textarea formControlName="content" class="form-control newMessageArea" cols="10"
+                        rows="10"></textarea>
+                    <button type="submit" class="btn btn-danger mt-2">Send</button>
+                    <div *ngIf="displaySpinner" class="spinner-border" role="status">
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form-group">
+            <div *ngIf="successMessage" class="alert alert-success">{{successMessage}}</div>
+        </div>
+    </div>
+</div>
